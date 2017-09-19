@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace AndreMarcondesTeixeira
+namespace CSharp.Util.Currency.Tests
 {
     public class CurrencyTest
     {
@@ -10,23 +10,20 @@ namespace AndreMarcondesTeixeira
         public void Currency_Is_A_Value_Type_And_All_Factory_Methods_Return_New_Instances()
         {
             Assert.False(Object.ReferenceEquals(Currency.XXX, Currency.XXX));
-            Assert.False(Object.ReferenceEquals(Currency.GetByLetterCode("XXX"), Currency.GetByLetterCode("XXX")));
-            Assert.False(Object.ReferenceEquals(Currency.GetByNumericCode("999"), Currency.GetByNumericCode("999")));
+            Assert.False(Object.ReferenceEquals(Currency.GetInstance("XXX"), Currency.GetInstance("XXX")));
         }
 
         [Fact]
-        public void Currency_Instances_Can_Be_Created_By_Three_Ways()
+        public void Currency_Instances_Can_Be_Created_By_Two_Ways()
         {
             Assert.IsType(typeof(Currency), Currency.XXX);
-            Assert.IsType(typeof(Currency), Currency.GetByLetterCode("XXX"));
-            Assert.IsType(typeof(Currency), Currency.GetByNumericCode("999"));
+            Assert.IsType(typeof(Currency), Currency.GetInstance("XXX"));
         }
 
         [Fact]
         public void Currency_Getter_Methods_Throws_Exception_For_Nonexistent_Currencies()
         {
-            Assert.Throws<ArgumentException>(() => Currency.GetByLetterCode("Nonexistent"));
-            Assert.Throws<ArgumentException>(() => Currency.GetByNumericCode("Nonexistent"));
+            Assert.Throws<ArgumentException>(() => Currency.GetInstance("Nonexistent"));
         }
 
         [Fact]
@@ -41,6 +38,18 @@ namespace AndreMarcondesTeixeira
         {
             Assert.IsType(typeof(List<Currency>), Currency.AllCurrencies);
             Assert.Equal(178, Currency.AllCurrencies.Count);
+        }
+
+        [Fact]
+        public void Can_Get_All_Properties_Of_A_Currency()
+        {
+            Currency usd = Currency.USD;
+
+            Assert.Equal(usd.GetCurrencyCode(), "USD");
+            Assert.Equal(usd.GetNumericCode(), 840);
+            Assert.Equal(usd.GetDisplayName(), "US Dollar");
+            Assert.Equal(usd.GetDefaultFractionDigits(), 2);
+
         }
     }
 }

@@ -1,13 +1,13 @@
-# AndreMarcondesTeixeira.Currency
-[![Build status](https://ci.appveyor.com/api/projects/status/ff4jg5689m7ify1q?svg=true)](https://ci.appveyor.com/project/andremarcondesteixeira/currency)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/andremarcondesteixeira/currency/blob/master/LICENSE)
-[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-Welcome-brightgreen.svg)](https://github.com/andremarcondesteixeira/currency/blob/master/CONTRIBUTING.md)
+# CSharp.Util.Currency
+[![Build status](https://ci.appveyor.com/api/projects/status/ff4jg5689m7ify1q?svg=true)](https://ci.appveyor.com/project/mdupuis13/currency)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mdupuis13/currency/blob/master/LICENSE)
+[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-Welcome-brightgreen.svg)](https://github.com/mdupuis13/currency/blob/master/CONTRIBUTING.md)
 
 A simple cross platform currency class library for .Net, that follows the ISO 4217 standard.
 
 The implementation of this library is compatible with .Net Standard 1.0 (see [https://docs.microsoft.com/en-us/dotnet/standard/net-standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) for details).
 
-AndreMarcondesTeixeira.Currency is a value type, i.e, a struct, and has no public constructor, but simple, quick methods that return you the currency instance you want instead.
+CSharp.Util.Currency is a value type, i.e, a struct, and has no public constructor, but simple, quick methods that return you the currency instance you want instead.
 
 ### Installation
 
@@ -19,7 +19,7 @@ Install-Package currency
 ### Usage
 First of all, import the namespace, for convenience:
 ``` c#
-using AndreMarcondesTeixeira;
+using CSharp.Util.Currency;
 ```
 
 Then, you can get a currency instance by using one of these methods:

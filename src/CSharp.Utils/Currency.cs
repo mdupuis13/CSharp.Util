@@ -1,6 +1,6 @@
 using System;
 
-namespace AndreMarcondesTeixeira
+namespace CSharp.Util.Currency
 {
     /// <summary>
     ///     The <see cref="Currency" /> class follows ISO 4217:2015, providing an easy way
@@ -27,16 +27,16 @@ namespace AndreMarcondesTeixeira
     public partial struct Currency : IEquatable<Currency>
     {
         /// <summary>The 3 letters ISO code of the currency</summary>
-        public string LetterCode { get; }
+        private string LetterCode { get; }
 
         /// <summary>The ISO minor units of the currency</summary>
-        public byte MinorUnits { get; }
+        private byte MinorUnits { get; }
 
         /// <summary>The ISO name of the currency</summary>
-        public string Name { get; }
+        private string Name { get; }
 
         /// <summary>The numeric ISO code of the currency</summary>
-        public string NumericCode { get; }
+        private string NumericCode { get; }
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Currency" /> class.

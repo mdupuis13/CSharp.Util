@@ -1,6 +1,6 @@
 using System;
 
-namespace AndreMarcondesTeixeira
+namespace CSharp.Util.Currency
 {
     public partial struct Currency : IEquatable<Currency>
     {
