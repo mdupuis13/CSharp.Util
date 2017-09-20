@@ -1,5 +1,4 @@
 # CSharp.Util.Currency
-[![Build status](https://ci.appveyor.com/api/projects/status/ff4jg5689m7ify1q?svg=true)](https://ci.appveyor.com/project/mdupuis13/currency)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mdupuis13/currency/blob/master/LICENSE)
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-Welcome-brightgreen.svg)](https://github.com/mdupuis13/currency/blob/master/CONTRIBUTING.md)
 
