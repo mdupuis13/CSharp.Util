@@ -56,9 +56,9 @@ namespace CSharp.Util.Currency
         {
             return
                 a.NumericCode == b.NumericCode
-                && a.LetterCode == b.LetterCode
-                && a.MinorUnits == b.MinorUnits
-                && a.Name == b.Name;
+                && a.CurrencyCode == b.CurrencyCode
+                && a.DefaultFractionDigits == b.DefaultFractionDigits
+                && a.DisplayName == b.DisplayName;
         }
     }
 }

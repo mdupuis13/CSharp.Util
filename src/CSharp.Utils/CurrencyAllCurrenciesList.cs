@@ -6,7 +6,7 @@ namespace CSharp.Util.Currency
     public partial struct Currency : IEquatable<Currency>
     {
         /// <summary>A list of all the currencies.</summary>
-        public static readonly IList<Currency> AllCurrencies = new List<Currency>
+        private static readonly IList<Currency> AllCurrencies = new List<Currency>
         {
             Currency.AED,
             Currency.AFN,

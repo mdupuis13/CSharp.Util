@@ -36,8 +36,8 @@ namespace CSharp.Util.Currency.Tests
         [Fact]
         public void There_Is_A_Publicly_Visible_Readonly_List_Of_All_Currencies()
         {
-            Assert.IsType(typeof(List<Currency>), Currency.AllCurrencies);
-            Assert.Equal(178, Currency.AllCurrencies.Count);
+            Assert.IsType(typeof(List<Currency>), Currency.GetAvailableCurrencies());
+            Assert.Equal(178, Currency.GetAvailableCurrencies().Count);
         }
 
         [Fact]

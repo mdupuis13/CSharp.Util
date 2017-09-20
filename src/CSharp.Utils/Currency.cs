@@ -5,6 +5,13 @@ namespace CSharp.Util.Currency
     /// <summary>
     ///     The <see cref="Currency" /> class follows ISO 4217:2015, providing an easy way
     ///     to represent ISO currencies.
+    ///     <para>
+    ///         This class mimics the <code>java.util.Currency</code> package as described in Oracle's javaSE 8 documentation (https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html). 
+    ///     </para>
+    ///     <para>
+    ///         Some methods are missing, most notably all methods receiving a Locale in a parameter. I might add them one day... or maybe you can ? Pull requests are welcomed.<br />
+    ///         <code>getSymbol()</code> is also missing. This also needs Locale support to work correctly.
+    ///     </para>
     /// </summary>
     /// <remarks>
     ///     All currencies are represented, except for "ANTARCTICA", "PALESTINE, STATE OF"
@@ -27,16 +34,16 @@ namespace CSharp.Util.Currency
     public partial struct Currency : IEquatable<Currency>
     {
         /// <summary>The 3 letters ISO code of the currency</summary>
-        private string LetterCode { get; }
+        private string CurrencyCode;
 
         /// <summary>The ISO minor units of the currency</summary>
-        private byte MinorUnits { get; }
+        private byte DefaultFractionDigits;
 
         /// <summary>The ISO name of the currency</summary>
-        private string Name { get; }
+        private string DisplayName;
 
         /// <summary>The numeric ISO code of the currency</summary>
-        private string NumericCode { get; }
+        private string NumericCode;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Currency" /> class.
@@ -55,16 +62,16 @@ namespace CSharp.Util.Currency
         ///         var currency = Currency.GetByNumericCode("999");
         ///     </code>
         /// </example>
-        /// <param name="letterCode">The 3 letters ISO code of the Currency.</param>
+        /// <param name="currencyCode">The 3 letters ISO code of the Currency.</param>
         /// <param name="numericCode">The 3 digits numeric ISO code of the Currency.</param>
-        /// <param name="minorUnits">The ISO minor units of the Currency.</param>
-        /// <param name="name">The ISO name of the Currency.</param>
-        private Currency(string letterCode, string numericCode, byte minorUnits, string name)
+        /// <param name="defaultFractionDigits">The ISO minor units of the Currency.</param>
+        /// <param name="displayName">The ISO name of the Currency.</param>
+        private Currency(string currencyCode, string numericCode, byte defaultFractionDigits, string displayName)
         {
-            this.LetterCode = letterCode;
+            this.CurrencyCode = currencyCode;
             this.NumericCode = numericCode;
-            this.MinorUnits = minorUnits;
-            this.Name = name;
+            this.DefaultFractionDigits = defaultFractionDigits;
+            this.DisplayName = displayName;
         }
     }
 }
