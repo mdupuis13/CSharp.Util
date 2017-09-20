@@ -6,7 +6,7 @@ namespace CSharp.Util.Currency
     ///     The <see cref="Currency" /> class follows ISO 4217:2015, providing an easy way
     ///     to represent ISO currencies.
     ///     <para>
-    ///         This class mimics the <code>java.util.Currency</code> package as described in Oracle's javaSE 8 documentation (https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html). 
+    ///         This class mimics the <code>java.util.Currency</code> package as described in Oracle's javaSE 8 documentation https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html. 
     ///     </para>
     ///     <para>
     ///         Some methods are missing, most notably all methods receiving a Locale in a parameter. I might add them one day... or maybe you can ? Pull requests are welcomed.<br />

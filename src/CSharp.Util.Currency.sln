@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "currency", "currency.csproj", "{659ADC97-C123-4326-A088-7A4EE88A90E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Currency", "Currency.csproj", "{659ADC97-C123-4326-A088-7A4EE88A90E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "currency-test", "..\test\currency-test.csproj", "{DE9FC5BD-1EF3-45F8-B8A9-C8573AD7F61B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyTest", "..\test\CurrencyTest.csproj", "{DE9FC5BD-1EF3-45F8-B8A9-C8573AD7F61B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
