@@ -23,12 +23,17 @@ First of all, import the namespace, for convenience:
 using CSharp.Util.Currency;
 ```
 
-Then, you can get a currency instance by using this method:
+Then, you can get a currency instance by using one of these methods:
 
-* Using the method `GetInstance("XXX")`, where, XXX is the three letters ISO code of the currency:
+* Calling a factory property, where XXX is the three letters ISO code of the currency:
 ``` c#
-var currency = Currency.GetInstance("XXX");
+var currency = Currency.XXX;
 ```
+
+* Using the method GetByLetterCode, where, again, XXX is the three letters ISO code of the currency:
+``` c#
+var currency = Currency.GetByLetterCode("XXX");
+``````
 
 The Currency class have four functions (other than the standard ones):
 ``` c#
