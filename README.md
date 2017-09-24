@@ -10,12 +10,12 @@ The implementation of this library is compatible with .Net Standard 1.0 (see [ht
 
 CSharp.Util.Currency is a value type, i.e, a struct, and has no public constructor, but simple, quick methods that return you the currency instance you want instead.
 
-### Installation
+<!-- ### Installation
 
 Install through NuGet Package Manager:
 ```
 Install-Package currency
-```
+``` -->
 
 ### Usage
 First of all, import the namespace, for convenience:
@@ -23,39 +23,28 @@ First of all, import the namespace, for convenience:
 using CSharp.Util.Currency;
 ```
 
-Then, you can get a currency instance by using one of these methods:
+Then, you can get a currency instance by using this method:
 
-* Calling a factory property, where XXX is the three letters ISO code of the currency:
+* Using the method `GetInstance("XXX")`, where, XXX is the three letters ISO code of the currency:
 ``` c#
-var currency = Currency.XXX;
+var currency = Currency.GetInstance("XXX");
 ```
 
-* Using the method GetByLetterCode, where, again, XXX is the three letters ISO code of the currency:
-``` c#
-var currency = Currency.GetByLetterCode("XXX");
-```
-
-* Using the method GetByNumericCode, where 999 is the three numbers ISO code of the currency:
-``` c#
-// Note that the numeric code is a string
-var currency = Currency.GetByNumericCode("999");
-```
-
-The Currency class have four read only properties:
+The Currency class have four functions (other than the standard ones):
 ``` c#
 public struct Currency : IEquatable<Currency>
 {
     // The 3 letters ISO code of the currency
-    public string LetterCode { get; }
+    public string GetCurrencyCode();
 
     // The ISO minor units of the currency
-    public byte MinorUnits { get; }
+    public int GetDefaultFractionDigits();
 
     // The ISO name of the currency
-    public string Name { get; }
+    public string GetDisplayName();
 
     // The numeric ISO code of the currency
-    public string NumericCode { get; }
+    public string GetNumericCode();
 }
 ```
 
@@ -70,14 +59,14 @@ var areCurrenciesEquivalent = (Currency.XXX != Currency.XXX);
 
 You can get a list of all currencies:
 ``` c#
-var allCurrencies = Currency.AllCurrencies;
+var allCurrencies = Currency.GetAvailableCurrencies();
 
 foreach (var currency in allCurrencies)
 {
-    var currencyISOLetterCode = currency.LetterCode;
-    var currencyISONumericCode = currency.NumericCode;
-    var currencyName = currency.Name;
-    var currencyMinorUnits = currency.MinorUnits;
+    var currencyISOLetterCode = currency.GetCurrencyCode();
+    var currencyISONumericCode = currency.GetNumericCode();
+    var currencyName = currency.GetDisplayName();
+    var currencyMinorUnits = currency.GetDefaultFractionDigits();
 }
 ```
 
