@@ -10,20 +10,20 @@ namespace CSharp.Util.Currency.Tests
         public void Currency_Is_A_Value_Type_And_All_Factory_Methods_Return_New_Instances()
         {
             Assert.False(Object.ReferenceEquals(Currency.XXX, Currency.XXX));
-            Assert.False(Object.ReferenceEquals(Currency.GetInstance("XXX"), Currency.GetInstance("XXX")));
+            Assert.False(Object.ReferenceEquals(Currency.GetByLetterCode("XXX"), Currency.GetByLetterCode("XXX")));
         }
 
         [Fact]
         public void Currency_Instances_Can_Be_Created_By_Two_Ways()
         {
             Assert.IsType(typeof(Currency), Currency.XXX);
-            Assert.IsType(typeof(Currency), Currency.GetInstance("XXX"));
+            Assert.IsType(typeof(Currency), Currency.GetByLetterCode("XXX"));
         }
 
         [Fact]
         public void Currency_Getter_Methods_Throws_Exception_For_Nonexistent_Currencies()
         {
-            Assert.Throws<ArgumentException>(() => Currency.GetInstance("Nonexistent"));
+            Assert.Throws<ArgumentException>(() => Currency.GetByLetterCode("Nonexistent"));
         }
 
         [Fact]

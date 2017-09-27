@@ -41,7 +41,7 @@ namespace CSharp.Util.Currency
         /// <exception cref="System.ArgumentException">
         ///     Thrown when no currency is found with the specified letter code.
         /// </exception>
-        public static Currency GetInstance(string currencyCode)
+        public static Currency GetByLetterCode(string currencyCode)
         {
             var filteredCurrencies = Currency.AllCurrencies.Where(currency => currency.CurrencyCode == currencyCode);
 
