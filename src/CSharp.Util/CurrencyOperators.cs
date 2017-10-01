@@ -4,7 +4,9 @@ namespace CSharp.Util.Currency
 {
     public partial struct Currency : IEquatable<Currency>
     {
-        /// <summary>Compares the equality of two currencies.</summary>
+        /// <summary>
+        /// Compares the equality of two currencies.
+        /// </summary>
         /// <remarks>
         ///     The instances of <see cref="Currency" /> class are compared through their
         ///     whole set of properties.
@@ -14,7 +16,9 @@ namespace CSharp.Util.Currency
             return AreEquivalent(a, b);
         }
 
-        /// <summary>Compares the inequality of two currencies.</summary>
+        /// <summary>
+        /// Compares the inequality of two currencies.
+        /// </summary>
         /// <remarks>
         ///     The instances of <see cref="Currency" /> class are compared through their
         ///     whole set of properties.
@@ -24,7 +28,9 @@ namespace CSharp.Util.Currency
             return !AreEquivalent(a, b);
         }
 
-        /// <summary>Compares the equality of two currencies.</summary>
+        /// <summary>
+        /// Compares the equality of two currencies.
+        /// </summary>
         /// <remarks>
         ///     The instances of <see cref="Currency" /> class are compared through their
         ///     whole set of properties.
@@ -35,7 +41,9 @@ namespace CSharp.Util.Currency
             return AreEquivalent(this, (Currency) currency);
         }
 
-        /// <summary>Compares the equality of two currencies.</summary>
+        /// <summary>
+        /// Compares the equality of two currencies.
+        /// </summary>
         /// <remarks>
         ///     The instances of <see cref="Currency" /> class are compared through their
         ///     whole set of properties.
@@ -46,7 +54,13 @@ namespace CSharp.Util.Currency
             return AreEquivalent(this, currency);
         }
 
-        /// <remarks>The hash code is taken from the base class Object.</remarks>
+        
+
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>The hash code is taken from the base class Object.</returns>
         public override int GetHashCode()
         {
             return base.GetHashCode();
@@ -55,10 +69,10 @@ namespace CSharp.Util.Currency
         private static bool AreEquivalent(Currency a, Currency b)
         {
             return
-                a.NumericCode == b.NumericCode
-                && a.CurrencyCode == b.CurrencyCode
-                && a.DefaultFractionDigits == b.DefaultFractionDigits
-                && a.DisplayName == b.DisplayName;
+                a._numericCode == b._numericCode
+                && a._currencyCode == b._currencyCode
+                && a._defaultFractionDigits == b._defaultFractionDigits
+                && a._displayName == b._displayName;
         }
     }
 }

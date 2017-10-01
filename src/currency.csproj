@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Currency</AssemblyName>
     <Title>Currency</Title>
-    <PackageVersion>4.0.0</PackageVersion>
+    <PackageVersion>4.0.1</PackageVersion>
     <AssemblyCompany>mdupuis13</AssemblyCompany>
     <AssemblyDescription>A simple cross-platform currency struct.</AssemblyDescription>
     <RootNamespace>CSharp.Utils.Currency</RootNamespace>
@@ -19,12 +19,12 @@ A fork to generalize the namespace and modify the original to better copy the ja
     <RepositoryUrl>https://github.com/mdupuis13/currency</RepositoryUrl>
     <PackageTags>currency;money;finance;netstandard1.0</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.0.0</FileVersion>
-    <Version>4.0.0</Version>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <FileVersion>4.0.1.0</FileVersion>
+    <Version>4.0.1</Version>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/mdupuis13/currency/master/LICENSE</PackageLicenseUrl>
-    <PackageReleaseNotes>Now, Currency is value type (a struct), the constructor was made private, some bugs were fixed, a new factory was created and a publicly visible readonly list of all the currencies was made available.</PackageReleaseNotes>
+    <PackageReleaseNotes>Currency is value type (a struct), the constructor was made private, some bugs were fixed, a new factory was created and a publicly visible readonly list of all the currencies was made available.</PackageReleaseNotes>
     <Product>CSharp.Util.Currency</Product>
     <PackageId>CSharp.Util.Currency</PackageId>
   </PropertyGroup>
