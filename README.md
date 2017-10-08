@@ -2,13 +2,13 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mdupuis13/currency/blob/master/LICENSE)
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-Welcome-brightgreen.svg)](https://github.com/mdupuis13/currency/blob/master/CONTRIBUTING.md)
 
-A simple cross platform currency class library for .Net, that follows the ISO 4217 standard.
+A simple cross platform currency class library for .Net.
 
 This is a fork of the project [AndreMarcondesTeixeira.Currency](https://github.com/andremarcondesteixeira/currency) by André Marcondes Teixeira. I needed a library that corresponds better to the java.util.Currency library for my [Time and Money](https://github.com/mdupuis13/TimeAndMoneyCSharp) project.
 
-The implementation of this library is compatible with .Net Standard 1.0 (see [https://docs.microsoft.com/en-us/dotnet/standard/net-standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) for details).
+The implementation of this library is compatible with .Net Standard 2.0 (see [https://docs.microsoft.com/en-us/dotnet/standard/net-standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) for details). It uses the `Cultures` from `System.Globalization` namespace.
 
-CSharp.Util.Currency is a value type, i.e, a struct, and has no public constructor, but simple, quick methods that return you the currency instance you want instead.
+CSharp.Util.Currency is a value type, i.e, a struct, and has no public constructor, but simple, factory methods that return you the currency instance you want instead.
 
 <!-- ### Installation
 
@@ -17,7 +17,7 @@ Install through NuGet Package Manager:
 Install-Package currency
 ``` -->
 
-### Usage
+## Usage
 First of all, import the namespace, for convenience:
 ``` c#
 using CSharp.Util.Currency;
@@ -35,21 +35,29 @@ var currency = Currency.XXX;
 var currency = Currency.GetByLetterCode("XXX");
 ``````
 
-The Currency class have four functions (other than the standard ones):
+The Currency class have those functions (other than the standard ones):
 ``` c#
 public struct Currency : IEquatable<Currency>
 {
     // The 3 letters ISO code of the currency
     public string GetCurrencyCode();
 
-    // The ISO minor units of the currency
+    // The 3 numbers ISO code of the currency
+    public string GetNumericCode();
+
+    // The number of decimals of the currency
     public int GetDefaultFractionDigits();
 
     // The ISO name of the currency
     public string GetDisplayName();
 
-    // The numeric ISO code of the currency
-    public string GetNumericCode();
+    // The display culture of the currency
+    public string GetDisplayCulture();
+
+    // The display symbol ($, £, etc.) of the currency
+    public string GetSymbol();
+    // The display symbol ($, £, etc.) of the currency in the given CultureInfo
+    public string GetSymbol(CultureInfo cultureInfo)
 }
 ```
 
@@ -71,9 +79,12 @@ foreach (var currency in allCurrencies)
     var currencyISOLetterCode = currency.GetCurrencyCode();
     var currencyISONumericCode = currency.GetNumericCode();
     var currencyName = currency.GetDisplayName();
+    var currencySymbol = currency.GetSymbol();
     var currencyMinorUnits = currency.GetDefaultFractionDigits();
 }
 ```
 
-### Contributing
+## Contributing
 You can contribute by doing unit tests, documentation, making pull requests or sharing the project.
+
+See the file [CONTRIBUTING.md](https://github.com/andremarcondesteixeira/currency/blob/master/CONTRIBUTING.md) for more details.

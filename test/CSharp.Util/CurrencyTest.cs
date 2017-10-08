@@ -36,8 +36,9 @@ namespace CSharp.Util.Currency.Tests
         [Fact]
         public void There_Is_A_Publicly_Visible_Readonly_List_Of_All_Currencies()
         {
-            Assert.IsType(typeof(List<Currency>), Currency.GetAvailableCurrencies());
-            Assert.Equal(177, Currency.GetAvailableCurrencies().Count);
+            var result = Currency.GetAvailableCurrencies();
+            Assert.IsType(typeof(List<Currency>), result);
+            Assert.Equal(178, result.Count);
         }
 
         [Fact]
@@ -50,6 +51,14 @@ namespace CSharp.Util.Currency.Tests
             Assert.Equal(usd.GetDisplayName(), "US Dollar");
             Assert.Equal(usd.GetDefaultFractionDigits(), 2);
 
+        }
+
+        [Fact]
+        public void Can_Compare_Two_Currencies()
+        {
+            Currency cad1 = Currency.CAD;
+            Currency cad2 = Currency.CAD;
+            Assert.True(cad1.Equals(cad2));
         }
     }
 }

@@ -24,13 +24,6 @@ namespace CSharp.Util.Currency.Tests
             Thread.CurrentThread.CurrentCulture = _culture;
         }
 
-        //[Fact]
-        //public void Can_create_currency_using_culture_info()
-        //{
-        //    Currency currency = new CultureInfo("fr-FR");
-        //    Assert.NotNull(currency);
-        //}
-
         [Fact]
         public void Can_create_currency_using_currency_code()
         {
@@ -38,19 +31,6 @@ namespace CSharp.Util.Currency.Tests
             Assert.NotNull(currency);
         }
 
-        //[Fact]
-        //public void Can_create_currency_using_current_culture()
-        //{
-        //    Currency currency = CultureInfo.CurrentCulture;
-        //    Assert.NotNull(currency);
-        //}
-
-        //[Fact]
-        //public void Can_create_currency_using_region_info()
-        //{
-        //    Currency currency = new RegionInfo("CA");
-        //    Assert.NotNull(currency);
-        //}
 
         [Fact]
         public void Currency_creation_creates_meaningful_display_cultures()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using CSharp.Util.TypeExtensions;
 
 namespace ConsoleApp1
 {
@@ -8,15 +9,16 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             // Displays several properties of the neutral cultures.
-            Console.WriteLine("CULTURE     ISO ISO WIN DISPLAYNAME                              ENGLISHNAME");
+            Console.WriteLine("CULTURE      ISO ISO WIN DISPLAYNAME                              ENGLISHNAME CURRENCY");
             foreach (CultureInfo ci in CultureInfo.GetCultures(CultureTypes.SpecificCultures))
             {
                 WriteCulture(ci);
             }
 
-            Console.WriteLine(" {0}", "Currenc culture");
+            Console.WriteLine("Current culture");
             WriteCulture(CultureInfo.CurrentCulture);
 
+            Console.WriteLine("\nPress <Enter> to continue...");
             Console.ReadLine();
         }
 
@@ -26,8 +28,9 @@ namespace ConsoleApp1
             Console.Write(" {0,-3}", ci.TwoLetterISOLanguageName);
             Console.Write(" {0,-3}", ci.ThreeLetterISOLanguageName);
             Console.Write(" {0,-3}", ci.ThreeLetterWindowsLanguageName);
-            Console.Write(" {0,-40}", ci.DisplayName);
-            Console.Write(" {0,-40}", ci.EnglishName);
+            Console.Write(" {0,-40}", ci.DisplayName.Truncate(40));
+            Console.Write(" {0,-40}", ci.EnglishName.Truncate(40));
+
             try
             {
                 Console.WriteLine(" {0,-6}", new RegionInfo(ci.LCID).ISOCurrencySymbol);
