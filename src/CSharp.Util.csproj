@@ -3,9 +3,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>CSharp.Util</AssemblyName>
     <Title>Currency</Title>
-    <PackageVersion>4.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <AssemblyCompany>mdupuis13</AssemblyCompany>
-    <AssemblyDescription>A simple cross-platform currency struct.</AssemblyDescription>
+    <AssemblyDescription>Collection of useful classes and functions organized into logical namespaces.</AssemblyDescription>
     <RootNamespace>CSharp.Util</RootNamespace>
     <ApplicationIcon />
     <Win32Resource />
@@ -17,20 +17,20 @@
     <RepositoryUrl>https://github.com/mdupuis13/CSharp.Util</RepositoryUrl>
     <PackageTags>currency;netstandard2.0,stringextensions,csharp.util,utilities</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/mdupuis13/CSharp.Util/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageReleaseNotes>Currency is value type (a struct), the constructor was made private, some bugs were fixed, a new factory was created and a publicly visible readonly list of all the currencies was made available.</PackageReleaseNotes>
+    <PackageReleaseNotes>CSharp.Util is a new project that incorporated work from the AndreMarcondesTeixeira.Currency repository.</PackageReleaseNotes>
     <Product>CSharp.Util</Product>
     <PackageId>CSharp.Util</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>
-    <DocumentationFile>bin\Debug\netstandard1.0\currency.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\csharp.util.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.0\currency.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\csharp.util.xml</DocumentationFile>
   </PropertyGroup>
 </Project>

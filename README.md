@@ -96,12 +96,64 @@ using CSharp.Util.TypeExtensions;
 
 Then, you can use one of the type extension methods methods:
 
-
 ### StringExtensions
 #### `string Truncate(int maxLength)`
+Truncates a string to `maxLength` if possible.
 ``` c#
 string helloWorld = "Hello World !";
-string hello = helloWorld.Truncate(5);
+Console.WriteLine(helloWorld.Truncate(5));
+
+// The example displays the following output:
+//          Hello
+```
+
+### DecimalExtensions
+#### `int GetPrecision()`
+Returns thee number of digits. Counts only digits, excluding the decimal separator.
+``` c#
+decimal myDecimal = 123.45;
+Console.WriteLine(myDecimal.GetPrecision());
+
+// The example displays the following output:
+//          5
+```
+
+#### `int GetScale()`
+Number of digits to the right of the decimal point without ending zeros.
+``` c#
+decimal myDecimal = 123.45;
+Console.WriteLine(myDecimal.GetScale());
+
+// The example displays the following output:
+//          2
+```
+
+#### `int GetRightNumberOfDigits()`
+Number of digits to the right of the decimal point without ending zeros.
+``` c#
+decimal myDecimal = 123.4500;
+Console.WriteLine(myDecimal.GetRightNumberOfDigits());
+
+decimal myDecimal = 123.45;
+Console.WriteLine(myDecimal.GetRightNumberOfDigits());
+
+// The example displays the following output:
+//          2
+//          2
+```
+
+#### `int GetLeftNumberOfDigits()`
+Number of digits to the left of the decimal point without starting zeros.
+``` c#
+decimal myDecimal = 00123.45;
+Console.WriteLine(myDecimal.GetLeftNumberOfDigits());
+
+decimal myDecimal = 1,123.45;
+Console.WriteLine(myDecimal.GetLeftNumberOfDigits());
+
+// The example displays the following output:
+//          3
+//          4
 ```
 
 ## Contributing

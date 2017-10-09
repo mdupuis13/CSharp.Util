@@ -5,7 +5,7 @@ using Xunit;
 
 namespace CSharp.Util.TypeExtensions.Tests
 {
-    public class StringExtensions
+    public class StringExtensionsTests
     {
         [Fact]
         public void Cannot_truncate_negative_length()
