@@ -12,21 +12,19 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>mdupuis13</Authors>
     <Company>Martin Dupuis</Company>
-    <Description>A simple cross platform currency struct that follows the ISO 4217 standard.
-
-A fork to generalize the namespace and modify the original to better copy the java.util.Currency class.</Description>
+    <Description>Collection of useful classes and functions organized into logical namespaces. Those items are useful to me and I hope they can be useful to others also.</Description>
     <Copyright>Martin Dupuis</Copyright>
-    <RepositoryUrl>https://github.com/mdupuis13/currency</RepositoryUrl>
-    <PackageTags>currency;money;finance;netstandard1.0</PackageTags>
+    <RepositoryUrl>https://github.com/mdupuis13/CSharp.Util</RepositoryUrl>
+    <PackageTags>currency;netstandard2.0,stringextensions,csharp.util,utilities</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>4.0.1.0</AssemblyVersion>
-    <FileVersion>4.0.1.0</FileVersion>
-    <Version>4.0.1</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0</Version>
     <PackageProjectUrl></PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/mdupuis13/currency/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/mdupuis13/CSharp.Util/blob/master/LICENSE</PackageLicenseUrl>
     <PackageReleaseNotes>Currency is value type (a struct), the constructor was made private, some bugs were fixed, a new factory was created and a publicly visible readonly list of all the currencies was made available.</PackageReleaseNotes>
-    <Product>CSharp.Util.Currency</Product>
-    <PackageId>CSharp.Util.Currency</PackageId>
+    <Product>CSharp.Util</Product>
+    <PackageId>CSharp.Util</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>False</Optimize>

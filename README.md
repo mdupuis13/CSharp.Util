@@ -1,6 +1,6 @@
 # CSharp.Util
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mdupuis13/currency/blob/master/LICENSE)
-[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-Welcome-brightgreen.svg)](https://github.com/mdupuis13/currency/blob/master/CONTRIBUTING.md)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mdupuis13/CSharp.Util/blob/master/LICENSE)
+[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-Welcome-brightgreen.svg)](https://github.com/mdupuis13/CSharp.Util/blob/master/CONTRIBUTING.md)
 
 Collection of useful classes and functions organized into logical namespaces. Those items are useful to me and I hope they can be useful to others also.
 
@@ -107,4 +107,4 @@ string hello = helloWorld.Truncate(5);
 ## Contributing
 You can contribute by doing unit tests, documentation, making pull requests or sharing the project.
 
-See the file [CONTRIBUTING.md](https://github.com/andremarcondesteixeira/currency/blob/master/CONTRIBUTING.md) for more details.
+See the file [CONTRIBUTING.md](https://github.com/mdupuis13/CSharp.Util/blob/master/CONTRIBUTING.md) for more details.
