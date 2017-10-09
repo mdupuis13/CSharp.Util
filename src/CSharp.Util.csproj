@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Currency</AssemblyName>
+    <AssemblyName>CSharp.Util</AssemblyName>
     <Title>Currency</Title>
     <PackageVersion>4.0.1</PackageVersion>
     <AssemblyCompany>mdupuis13</AssemblyCompany>
     <AssemblyDescription>A simple cross-platform currency struct.</AssemblyDescription>
-    <RootNamespace>CSharp.Utils.Currency</RootNamespace>
+    <RootNamespace>CSharp.Util</RootNamespace>
     <ApplicationIcon />
     <Win32Resource />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
