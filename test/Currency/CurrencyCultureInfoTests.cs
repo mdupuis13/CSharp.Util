@@ -28,7 +28,6 @@ namespace CSharp.Util.Currency.Tests
         public void Can_create_currency_using_currency_code()
         {
             Currency currency = Currency.NZD;
-            Assert.NotNull(currency);
         }
 
 

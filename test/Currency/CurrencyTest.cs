@@ -16,8 +16,8 @@ namespace CSharp.Util.Currency.Tests
         [Fact]
         public void Currency_Instances_Can_Be_Created_By_Two_Ways()
         {
-            Assert.IsType(typeof(Currency), Currency.XXX);
-            Assert.IsType(typeof(Currency), Currency.GetByLetterCode("XXX"));
+            Assert.IsType<Currency>(Currency.XXX);
+            Assert.IsType<Currency>(Currency.GetByLetterCode("XXX"));
         }
 
         [Fact]
@@ -37,7 +37,7 @@ namespace CSharp.Util.Currency.Tests
         public void There_Is_A_Publicly_Visible_Readonly_List_Of_All_Currencies()
         {
             var result = Currency.GetAvailableCurrencies();
-            Assert.IsType(typeof(List<Currency>), result);
+            Assert.IsType<List<Currency>>(result);
             Assert.Equal(178, result.Count);
         }
 
@@ -46,10 +46,10 @@ namespace CSharp.Util.Currency.Tests
         {
             Currency usd = Currency.USD;
 
-            Assert.Equal(usd.GetCurrencyCode(), "USD");
-            Assert.Equal(usd.GetNumericCode(), 840);
-            Assert.Equal(usd.GetDisplayName(), "US Dollar");
-            Assert.Equal(usd.GetDefaultFractionDigits(), 2);
+            Assert.Equal("USD", usd.GetCurrencyCode());
+            Assert.Equal(840, usd.GetNumericCode());
+            Assert.Equal("US Dollar", usd.GetDisplayName());
+            Assert.Equal(2, usd.GetDefaultFractionDigits());
 
         }
 
