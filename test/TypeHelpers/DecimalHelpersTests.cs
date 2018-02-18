@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace CSharp.Util.TypeExtensions.Tests
+namespace CSharp.Util.TypeHelpers.Tests
 {
-    public class DecimalExtensionTests
+    public class DecimalTests
     {
         [Theory]
         [InlineData(4,   1123)]
@@ -14,7 +14,7 @@ namespace CSharp.Util.TypeExtensions.Tests
         [InlineData(5, 000323.4500)]
         public void TestGetPrecision(int expected, decimal value)
         {
-            Assert.Equal(expected, value.GetPrecision());
+            Assert.Equal(expected, DecimalHelpers.GetPrecision(value));
         }
 
         [Theory]
@@ -24,7 +24,7 @@ namespace CSharp.Util.TypeExtensions.Tests
         [InlineData(4, 000323.4501)]
         public void TestGetScale(int expected, decimal value)
         {
-            Assert.Equal(expected, value.GetScale());
+            Assert.Equal(expected, DecimalHelpers.GetScale(value));
         }
 
         [Theory]
@@ -34,7 +34,7 @@ namespace CSharp.Util.TypeExtensions.Tests
         [InlineData(4, 000323.4501)]
         public void TestGetRightNumberOfDigits(int expected, decimal value)
         {
-            Assert.Equal(expected, value.GetRightNumberOfDigits());
+            Assert.Equal(expected, DecimalHelpers.GetRightNumberOfDigits(value));
         }
 
         [Theory]
@@ -44,7 +44,7 @@ namespace CSharp.Util.TypeExtensions.Tests
         [InlineData(3, 000323.4500)]
         public void TestGetLeftNumberOfDigits(int expected, decimal value)
         {
-            Assert.Equal(expected, value.GetLeftNumberOfDigits());
+            Assert.Equal(expected, DecimalHelpers.GetLeftNumberOfDigits(value));
         }
     }
 }

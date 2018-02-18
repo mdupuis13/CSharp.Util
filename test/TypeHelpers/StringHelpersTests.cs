@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace CSharp.Util.TypeExtensions.Tests
+namespace CSharp.Util.TypeHelpers.Tests
 {
-    public class StringExtensionsTests
+    public class StringTests
     {
         [Fact]
         public void Cannot_truncate_negative_length()
         {
             string testValue = "abc123";
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => testValue.Truncate(-2));
+            Assert.Throws<ArgumentOutOfRangeException>(() => StringHelpers.Truncate(testValue, -2));
         }
 
         [Fact]
@@ -21,7 +21,7 @@ namespace CSharp.Util.TypeExtensions.Tests
             string testValue = "abc123";
             string expected = testValue;
 
-            Assert.Equal(expected, testValue.Truncate(10));
+            Assert.Equal(expected, StringHelpers.Truncate(testValue, 10));
         }
 
         [Fact]
@@ -30,7 +30,7 @@ namespace CSharp.Util.TypeExtensions.Tests
             string testValue = "abc123";
             string expected = "abc";
 
-            Assert.Equal(expected, testValue.Truncate(3));
+            Assert.Equal(expected, StringHelpers.Truncate(testValue, 3));
         }
 
     }

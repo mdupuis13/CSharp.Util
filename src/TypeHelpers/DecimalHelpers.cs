@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharp.Util.TypeExtensions
+namespace CSharp.Util.TypeHelpers
 {
     /// <summary>
     /// 
     /// </summary>
-    public static class DecimalExtension
+    public static class DecimalHelpers
     {
         /// <summary>
         /// Returns thee number of digits. Counts only digits, excluding the decimal separator.
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static int GetPrecision(this decimal value)
+        public static int GetPrecision(decimal value)
         {
             return GetLeftNumberOfDigits(value) + GetRightNumberOfDigits(value);
         }
@@ -27,7 +27,7 @@ namespace CSharp.Util.TypeExtensions
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static int GetScale(this decimal value)
+        public static int GetScale(decimal value)
         {
             return GetRightNumberOfDigits(value);
         }
@@ -37,10 +37,10 @@ namespace CSharp.Util.TypeExtensions
         /// </summary>
         /// <param name="value"></param>
         /// <returns>the number of digits to the right of the decimal separator</returns>
-        public static int GetRightNumberOfDigits(this decimal value)
+        public static int GetRightNumberOfDigits(decimal value)
         {
-            var text = value.ToString(System.Globalization.CultureInfo.InvariantCulture).TrimEnd('0');
-            var decpoint = text.IndexOf(System.Globalization.CultureInfo.InvariantCulture.NumberFormat.NumberDecimalSeparator);
+            var text = GetAbsoluteText(value);
+            var decpoint = GetDecPointPosition(value);
 
             if (decpoint < 0)
                 return 0;
@@ -53,15 +53,25 @@ namespace CSharp.Util.TypeExtensions
         /// </summary>
         /// <param name="value"></param>
         /// <returns>the number of digits to the left of the decimal separator</returns>
-        public static int GetLeftNumberOfDigits(this decimal value)
+        public static int GetLeftNumberOfDigits(decimal value)
         {
-            var text = Math.Abs(value).ToString(System.Globalization.CultureInfo.InvariantCulture).TrimStart('0');
-            var decpoint = text.IndexOf(System.Globalization.CultureInfo.InvariantCulture.NumberFormat.NumberDecimalSeparator);
+            var text = GetAbsoluteText(value);
+            var decpoint = GetDecPointPosition(value);
 
             if (decpoint == -1)
                 return text.Length;
 
             return decpoint;
+        }
+
+        private static string GetAbsoluteText(decimal value)
+        {
+            return Math.Abs(value).ToString(System.Globalization.CultureInfo.InvariantCulture).TrimStart('0');
+        }
+
+        private static int GetDecPointPosition(decimal value)
+        {
+            return GetAbsoluteText(value).IndexOf(System.Globalization.CultureInfo.InvariantCulture.NumberFormat.NumberDecimalSeparator);
         }
     }
 }
