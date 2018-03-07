@@ -10,7 +10,7 @@ namespace CSharp.Util.TypeHelpers
     public static class StringHelpers
     {
         /// <summary>
-        /// Truncates a string to the given length.
+        /// Truncates a string to the given length or returns entire string if `maxLength` is greater than value.Length()."/>
         /// </summary>
         /// <param name="value">String to truncate</param>
         /// <param name="maxLength">Maximum lenght of truncated string. Must be positive and greater than 0.</param>
