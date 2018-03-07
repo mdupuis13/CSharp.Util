@@ -85,18 +85,18 @@ foreach (var currency in allCurrencies)
 }
 ```
 
-## CSharp.Util.TypeExtensions
-Different extension methods for `C#`'s built-in types.
+## CSharp.Util.TypeHelpers
+Different helper methods for `C#`'s built-in types.
 
 ### Usage
 First of all, import the namespace, for convenience:
 ``` c#
-using CSharp.Util.TypeExtensions;
+using CSharp.Util.TypeHelpers;
 ```
 
-Then, you can use one of the type extension methods methods:
+Then, you can use one of the type helper methods:
 
-### StringExtensions
+### StringHelpers
 #### `string Truncate(int maxLength)`
 Truncates a string to `maxLength` if possible.
 ``` c#
@@ -107,7 +107,7 @@ Console.WriteLine(helloWorld.Truncate(5));
 //          Hello
 ```
 
-### DecimalExtensions
+### DecimalHelpers
 #### `int GetPrecision()`
 Returns thee number of digits. Counts only digits, excluding the decimal separator.
 ``` c#
@@ -119,7 +119,7 @@ Console.WriteLine(myDecimal.GetPrecision());
 ```
 
 #### `int GetScale()`
-Number of digits to the right of the decimal point without ending zeros.
+Number of digits to the right of the decimal separator without ending zeros.
 ``` c#
 decimal myDecimal = 123.45;
 Console.WriteLine(myDecimal.GetScale());
@@ -129,7 +129,7 @@ Console.WriteLine(myDecimal.GetScale());
 ```
 
 #### `int GetRightNumberOfDigits()`
-Number of digits to the right of the decimal point without ending zeros.
+Number of digits to the right of the decimal separator without ending zeros.
 ``` c#
 decimal myDecimal = 123.4500;
 Console.WriteLine(myDecimal.GetRightNumberOfDigits());
@@ -143,7 +143,7 @@ Console.WriteLine(myDecimal.GetRightNumberOfDigits());
 ```
 
 #### `int GetLeftNumberOfDigits()`
-Number of digits to the left of the decimal point without starting zeros.
+Number of digits to the left of the decimal separator without starting zeros.
 ``` c#
 decimal myDecimal = 00123.45;
 Console.WriteLine(myDecimal.GetLeftNumberOfDigits());
